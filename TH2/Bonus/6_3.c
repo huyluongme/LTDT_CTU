@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #define MAX 100
 
@@ -72,9 +71,10 @@ void DFS(Graph* pG, int u) {
 
 		printf("%d\n", s);
 		mark[s] = 1;
-		for (int v = pG->n; v >= 1; v--)
-			if (adjacent(pG, s, v))
+		for (int v = 1; v <= pG->n; v++)
+			if (adjacent(pG, s, v)) {
 				push_back(&S, v);
+			}
 	}
 }
 
